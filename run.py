@@ -8,8 +8,9 @@ load_dotenv()
 
 async def main():
     agent = Agent(
-        task="look for a hiring of an AI engineer from a startup company",
+        task="Create a Json format for a list of Machine Learning Jobs in the US, including the job title, company name, location, and salary. There is no need to relate to my current location",
         llm=ChatGoogleGenerativeAI(model = "gemini-2.0-flash"),
+        max_failures=5
     )
     await agent.run()
 

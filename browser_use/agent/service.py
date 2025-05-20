@@ -95,7 +95,7 @@ class Agent(Generic[Context]):
 		register_external_agent_status_raise_error_callback: Callable[[], Awaitable[bool]] | None = None,
 		# Agent settings
 		use_vision: bool = True,
-		use_vision_for_planner: bool = False,
+		use_vision_for_planner: bool = True,
 		save_conversation_path: Optional[str] = None,
 		save_conversation_path_encoding: Optional[str] = 'utf-8',
 		max_failures: int = 3,
